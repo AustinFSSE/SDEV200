@@ -1,6 +1,7 @@
 
 
-public class ArrayChecker {
+public class Main {
+
     public static void main(String[] args) {
 
         int[][] m1 = {{51, 25, 6}, {22, 1, 4}, {24, 54, 6}};
