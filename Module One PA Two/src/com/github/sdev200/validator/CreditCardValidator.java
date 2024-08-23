@@ -37,7 +37,7 @@ public class CreditCardValidator {
         for (int i = getSize(number) - 1; i >= 0; i--) {
             sum += getNumericValue(numberStr.charAt(i));
         }
-        return sum; // since we are dividing an int by 10 we will always get 1 + the remainder
+        return sum;
     }
     public static int sumOfOddPlace(long number) {
         int sum = 0;
@@ -54,10 +54,7 @@ public class CreditCardValidator {
         return Long.toString(d).length();
     }
     public static long getPrefix(long number, int k) {
-        if (getSize(number) > k) {
-            return Long.parseLong(Long.toString(number).substring(0, k));
-        }
-        return number;
+        return Long.parseLong(Long.toString(number).substring(0, k));
     }
 
 }

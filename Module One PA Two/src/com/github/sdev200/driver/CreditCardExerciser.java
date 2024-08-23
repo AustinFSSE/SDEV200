@@ -3,7 +3,7 @@ package com.github.sdev200.driver;
 import java.util.*;
 
 import static com.github.sdev200.validator.CreditCardValidator.*;
-import static java.lang.System.out;
+import static java.lang.System.*;
 
 
 public class CreditCardExerciser {
