@@ -1,8 +1,4 @@
-package com.github.SDEV200.Driver;
 
-// Importing static methods from the Conversions class (assumed to contain conversion methods)
-import static com.github.SDEV200.conversion.Conversions.*;
-// Importing the System.out class to simplify printing
 import static java.lang.System.out;
 
 public class ConversionDriver {
@@ -26,13 +22,13 @@ public class ConversionDriver {
                 // - %.1f formats the foot and meter values to 1 decimal place
                 // - %.3f formats the converted values to 3 decimal places
                 out.printf("%.1f    %.3f    |   %.1f     %.3f",
-                        feet[i], footToMeter(feet[i]), meter[i], meterToFoot(meter[i]));
+                        feet[i], Conversions.footToMeter(feet[i]), meter[i], Conversions.meterToFoot(meter[i]));
                 out.println(); // Print a newline for the next row
             }
             // For index 9 and above, a slight adjustment in formatting (fewer spaces for alignment)
             else {
                 out.printf("%.1f   %.3f    |   %.1f     %.3f",
-                        feet[i], footToMeter(feet[i]), meter[i], meterToFoot(meter[i]));
+                        feet[i], Conversions.footToMeter(feet[i]), meter[i], Conversions.meterToFoot(meter[i]));
                 out.println(); // Print a newline for the next row
             }
             // Increment the index variable to move to the next element in the array

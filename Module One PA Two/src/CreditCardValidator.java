@@ -1,6 +1,3 @@
-package com.github.sdev200.validator;
-
-
 import static java.lang.Character.*;
 
 public class CreditCardValidator {

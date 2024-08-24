@@ -1,8 +1,5 @@
-package com.github.sdev200.driver;
-
 import java.util.*;
 
-import static com.github.sdev200.validator.CreditCardValidator.*;
 import static java.lang.System.*;
 
 
@@ -13,7 +10,7 @@ public class CreditCardExerciser {
         Scanner input = new Scanner(System.in);
         long cardNumber = input.nextLong();
 
-        if (isValid(cardNumber)){
+        if (CreditCardValidator.isValid(cardNumber)){
             out.printf("%d is valid", cardNumber);
         }
         else {

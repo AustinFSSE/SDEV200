@@ -1,5 +1,3 @@
-package com.github.SDEV200.conversion;
-
 public class Conversions {
 
     // Static method to convert feet to meters
