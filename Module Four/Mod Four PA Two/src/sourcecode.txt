@@ -1,0 +1,138 @@
+
+// C:\Users\alm20\SDEV200\out\production\Mod Four PA Two\sourcecode.txt
+
+import java.util.*;
+import java.io.*;
+
+public class CodeReader
+{
+    public static void main(String[] args) {
+        Scanner fileInput = new Scanner(System.in);
+
+        LinkedList<Character> groupings = new LinkedList <>();
+
+        int openBrackets = 0;
+        int openCurlyBrackets = 0;
+        int openParenthesis = 0;
+
+        try {
+            System.out.print("Enter file path: ");
+            String file = fileInput.nextLine();
+            BufferedReader br = new BufferedReader(new FileReader(file));
+            String line;
+            while ((line = br.readLine()) != null) {
+                for (char c : line.toCharArray()) {
+                    switch (c) {
+                        case '(', ')', '{', '}', '[', ']':
+                            groupings.add(c);
+                            break;
+                        default:
+                    }
+                }
+            }
+            br.close();
+            fileInput.close();
+            for (int i = 0; i < groupings.size(); i++) {
+                if (groupings.get(i) == '(' && (groupings.get(i + 1) == '}' || groupings.get(i + 1) == ']')) {
+                    throw new IOException("Invalid use of grouping symbols");
+                }
+                if (groupings.get(i) == '{' && (groupings.get(i + 1) == ')' || groupings.get(i + 1) == ']')) {
+                    throw new IOException("Invalid use of grouping symbols");
+                }
+                if (groupings.get(i) == '[' && (groupings.get(i + 1) == '}' || groupings.get(i + 1) == ')')) {
+                    throw new IOException("Invalid use of grouping symbols");
+                }
+            }
+            for (Character grouping : groupings) {
+                if (grouping.equals('(')) {
+                    openParenthesis++;
+                }
+                if (grouping.equals(')')) {
+                    openParenthesis--;
+                }
+                if (grouping.equals('{')) {
+                    openCurlyBrackets++;
+                }
+                if (grouping.equals('}')) {
+                    openCurlyBrackets--;
+                }
+                if (grouping.equals('[')) {
+                    openBrackets++;
+                }
+                if (grouping.equals(']')) {
+                    openBrackets--;
+                }
+            }
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        System.out.println("Congrats! You used all your grouping symbols properly!\nGrouping symbols: " + groupings);
+        String s = "Congratulations! you did not leave any grouping unfinished!";
+        String notS = "You left a grouping incomplete. go back and review code";
+
+//      System.out.println(openParenthesis + " " + openBrackets + " " + openCurlyBrackets);
+
+        System.out.println((openParenthesis == 0 && openBrackets == 0 && openCurlyBrackets == 0) ? s : notS);
+
+    }
+}
+/*
+Austin Martin
+8/23/2024
+This program iterates throw two integer arrays and
+confirms if they have the same elements regardless of order
+ */
+
+
+public class ArrayChecker {
+
+    public static void main(String[] args) {
+        // Initialize two 2D arrays to be compared
+        int[][] m1 = {{51, 25, 6}, {22, 1, 4}, {24, 54, 6}};
+        int[][] m2 = {{51, 22, 25}, {6, 4, 1}, {24, 54, 6}};
+
+        // Print whether the two arrays contain the same numbers
+        System.out.printf("These 2D arrays %s the same numbers",
+                equals(m1, m2) ? "contain" : "do not contain");
+    }
+
+    // Checks if two 2D arrays contain the same numbers
+    public static boolean equals(int[][] m1, int[][] m2) {
+        // Check if the dimensions of the two matrices are the same
+        if (m1.length != m2.length) {
+            return false;
+        }
+        for (int i = 0; i < m1.length; i++) {
+            if (m1[i].length != m2[i].length) {
+                return false;
+            }
+        }
+
+        // Check if both arrays have the same elements
+        for (int[] row : m1) {
+            for (int element : row) {
+                // If an element in m1 is not found in m2, the arrays are not equal
+                if (!elementExistsInSecondArray(element, m2)) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    // Checks if an element exists in the second 2D array
+    private static boolean elementExistsInSecondArray(int element, int[][] m2) {
+        // Iterate through each row and element in the second array
+        for (int[] row : m2) {
+            for (int anInt : row) {
+                // Return true if the element is found
+                if (anInt == element) {
+                    return true;
+                }
+            }
+        }
+        // Return false if the element is not found
+        return false;
+    }
+}
