@@ -1,10 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="org.example.bankingjavafx.Controllers.LoginController"
-            prefHeight="400.0" prefWidth="600.0">
 
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="login_container" stylesheets="@../Styles/Login.css"
+            xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.bankingjavafx.Controllers.LoginController">
+   <VBox prefHeight="400" prefWidth="200" styleClass="login_logo_container" stylesheets="@../Styles/Login.css"
+         AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="JavaFx Bank"/>
+   </VBox>
+   <VBox layoutX="223.0" layoutY="25.0" prefHeight="350.0" prefWidth="350.0" styleClass="login_form_container"
+         stylesheets="@../Styles/Login.css" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="25.0">
+      <Label id="choice-prompt-text" text="Choose Your Account Type" textFill="#111111"/>
+      <ChoiceBox fx:id="account_selector" prefWidth="150.0" styleClass="account_selector"
+                 stylesheets="@../Styles/Login.css"/>
+      <Label fx:id="user_id_lbl" text="User ID"/>
+      <TextField fx:id="user_id_field" styleClass="input_field" stylesheets="@../Styles/Login.css"/>
+      <Label fx:id="user_password_lbl" stylesheets="@../Styles/Login.css" text="User Password"/>
+      <TextField fx:id="user_password_field" prefHeight="25.0" prefWidth="200.0" styleClass="input_field"
+                 stylesheets="@../Styles/Login.css"/>
+      <Button fx:id="login_button" mnemonicParsing="false" styleClass="login_form_container"
+              stylesheets="@../Styles/Login.css" text="Button"/>
+      <Label fx:id="error_lbl" styleClass="error_lbl" stylesheets="@../Styles/Login.css" text="Error: "/>
+   </VBox>
 </AnchorPane>
