@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="186.0" styleClass="main_menu_container" stylesheets="@../../Styles/ClientMenu.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.bankingjavafx.Controllers.Client.ClientMenuController">
+   <AnchorPane prefHeight="730.0" prefWidth="173.0" styleClass="left_container" stylesheets="@../../Styles/ClientMenu.css">
+      <VBox prefHeight="80.0" prefWidth="160.0" styleClass="title_container" stylesheets="@../../Styles/ClientMenu.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <ImageView fitHeight="48.0" fitWidth="109.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../../Images/bank.png" />
+         </ImageView>
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="JavaFx Banking" wrappingWidth="160.13671875" />
+      </VBox>
+      <VBox prefHeight="400.0" prefWidth="181.0" stylesheets="@../../Styles/ClientMenu.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+         <Button fx:id="dashboard_btn" alignment="CENTER" mnemonicParsing="false" styleClass="main_menu_container" text="Dashboard" textAlignment="CENTER" />
+         <Button fx:id="transactions_btn" alignment="CENTER" mnemonicParsing="false" styleClass="main_menu_container" text="Transactions" />
+         <Button fx:id="accounts_btn" mnemonicParsing="false" styleClass="main_menu_container" text="Accounts" />
+         <Line endX="120.0" />
+         <Button fx:id="profile_btn" alignment="CENTER" mnemonicParsing="false" styleClass="alt_menu_btn" stylesheets="@../../Styles/ClientMenu.css" text="Profile" />
+         <Button fx:id="logout_btn" alignment="CENTER" mnemonicParsing="false" styleClass="alt_menu_btn" text="Logout" />
+         <styleClass>
+            <String fx:value="main_menu_container" />
+            <String fx:value="menu_container" />
+         </styleClass>
+      </VBox>
+      <VBox prefHeight="114.0" prefWidth="153.0" styleClass="report_container" stylesheets="@../../Styles/ClientMenu.css" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Report Bug?" />
+         <Label prefHeight="34.0" prefWidth="122.0" text="Use this to report any errors or suggestions" />
+         <Button fx:id="report_btn" mnemonicParsing="false" text="Report" textFill="#fcfcfc" />
+      </VBox>
+   </AnchorPane>
+</VBox>

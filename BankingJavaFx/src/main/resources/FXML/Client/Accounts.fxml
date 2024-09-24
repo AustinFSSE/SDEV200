@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="750.0" prefWidth="850.0" styleClass="accounts_view_container"
+            stylesheets="@../../Styles/Accounts.css" xmlns="http://javafx.com/javafx/11.0.14-internal"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.bankingjavafx.Controllers.Client.AccountsController">
+   <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="accounts_view_container"
+         text="Checking Account" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0"/>
+   <VBox layoutX="14.0" layoutY="45.0" prefHeight="300.0" prefWidth="450.0" styleClass="accounts_view_container"
+         stylesheets="@../../Styles/Accounts.css" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="40.0">
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="accounts_view_container" text="Account Number"/>
+      <Label fx:id="checking_acc_number" styleClass="accounts_view_container"
+             stylesheets="@../../Styles/Accounts.css" text="3452 4950"/>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="accounts_view_container" text="Transaction Limit"/>
+      <Label fx:id="transaction_limit" styleClass="accounts_view_container" text="500.00"/>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="accounts_view_container" text="Date Created: "/>
+      <Label fx:id="ch_acc_date" styleClass="accounts_view_container" text="2022-02-07"/>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="accounts_view_container" text="Balance:"/>
+      <Label fx:id="ch_acc_balance" styleClass="accounts_view_container" text="\$3,000.00"/>
+   </VBox>
+   <Text layoutX="14.0" layoutY="379.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="accounts_view_container"
+         text="Savings Account" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="364.0"/>
+   <VBox layoutX="14.0" layoutY="391.0" prefHeight="300.0" prefWidth="450.0" styleClass="accounts_view_container"
+         AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="14.0">
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="accounts_view_container" text="Account Number"/>
+      <Label fx:id="savings_account_num" styleClass="accounts_view_container" text="3452 4950"/>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="accounts_view_container" text="Withdrawal Limit:"/>
+      <Label fx:id="withdrawal_limit" styleClass="accounts_view_container" text="500.00"/>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="accounts_view_container" text="Date Created: "/>
+      <Label fx:id="sv_acc_date" styleClass="accounts_view_container" text="2022-02-07"/>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="accounts_view_container" text="Balance:"/>
+      <Label fx:id="sv_acc_balance" styleClass="accounts_view_container" text="\$3,000.00"/>
+   </VBox>
+   <Text layoutX="464.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="accounts_view_container"
+         text="Move funds to Savings Account" AnchorPane.rightAnchor="174.974609375" AnchorPane.topAnchor="40.0"/>
+   <TextField fx:id="amount_to_sv" layoutX="455.0" layoutY="85.0" prefHeight="25.0" prefWidth="211.0"
+              styleClass="accounts_view_container" AnchorPane.rightAnchor="165.0" AnchorPane.topAnchor="85.0"/>
+   <Button fx:id="ch_transfer_btn" layoutX="455.0" layoutY="137.0" mnemonicParsing="false" prefHeight="34.0"
+           prefWidth="237.0" styleClass="accounts_view_container" text="Transfer" AnchorPane.rightAnchor="165.0"/>
+   <Text layoutX="452.0" layoutY="386.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="accounts_view_container"
+         text="Move funds to Checking Account" AnchorPane.rightAnchor="175.80194091796875"/>
+   <TextField fx:id="sv_amount_to_ch" layoutX="468.0" layoutY="418.0" prefHeight="25.0" prefWidth="222.0"
+              styleClass="accounts_view_container" AnchorPane.rightAnchor="172.0"/>
+   <Button fx:id="sv_transfer_btn" layoutX="448.0" layoutY="465.0" mnemonicParsing="false" prefHeight="34.0"
+           prefWidth="222.0" styleClass="accounts_view_container" text="Transfer" AnchorPane.rightAnchor="172.0"/>
+</AnchorPane>
