@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <VBox layoutX="28.0" layoutY="218.0" prefHeight="160.0" prefWidth="251.0">
+      <ImageView fitHeight="164.0" fitWidth="253.0" pickOnBounds="true">
+         <Image url="@../../../Images/flag6.gif"/>
+      </ImageView>
+   </VBox>
+    <VBox layoutX="319.0" layoutY="227.0" prefHeight="93.0" prefWidth="202.0">
+        <ImageView fitHeight="151.0" fitWidth="264.0" pickOnBounds="true">
+            <Image url="@../../../Images/flag1.gif" />
+        </ImageView>
+    </VBox>
+   <VBox layoutX="31.0" layoutY="34.0" prefHeight="131.0" prefWidth="228.0">
+      <ImageView fitHeight="147.0" fitWidth="245.0" pickOnBounds="true">
+         <Image url="@../../../Images/flag2.gif"/>
+      </ImageView>
+   </VBox>
+   <VBox layoutX="296.0" layoutY="14.0" prefHeight="160.0" prefWidth="289.0">
+      <ImageView fitHeight="179.0" fitWidth="289.0" pickOnBounds="true">
+         <Image url="@../../../Images/flag7.gif"/>
+      </ImageView>
+   </VBox>
+</AnchorPane>
