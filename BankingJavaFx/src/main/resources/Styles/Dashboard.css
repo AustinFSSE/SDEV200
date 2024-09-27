@@ -77,10 +77,10 @@
     -fx-padding: 10;
     -fx-spacing: 10;
     -fx-alignment: center_left;
-    -fx-border-radius: 10 10 10 10;
-    -fx-border-color: darkgrey;
-    -fx-background-color: darkgrey;
-    -fx-border-width: 1;
+    -fx-border-radius: 10;
+    -fx-border-color: black;
+    -fx-background-color: lightgrey;
+    -fx-border-width: 1.5;
     -fx-border-style: dashed;
 }
 

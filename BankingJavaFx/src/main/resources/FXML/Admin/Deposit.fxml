@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="750.0" prefWidth="850.0" styleClass="deposit_container" stylesheets="@../../Styles/Deposit.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.bankingjavafx.Controllers.admin.DepositController">
+    <VBox fillWidth="false" layoutX="15.0" layoutY="90.0" prefHeight="570.0" prefWidth="820.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="90.0">
+        <HBox alignment="CENTER" fillHeight="false" prefHeight="60.0" prefWidth="820.0">
+            <styleClass>
+                <String fx:value="deposit_container" />
+                <String fx:value="search_box" />
+            </styleClass>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Serch by payee address" textAlignment="CENTER" />
+            <TextField fx:id="payee_addr_fld" />
+            <Button fx:id="search_btn" mnemonicParsing="false" text="Search">
+                <graphic>
+                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                        <Image url="@../../Images/bank.png" />
+                    </ImageView>
+                </graphic>
+            </Button>
+        </HBox>
+        <ListView fx:id="search_listview" prefHeight="200.0" prefWidth="820.0" stylesheets="@../../Styles/Deposit.css" />
+        <VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="314.0" prefWidth="820.0" styleClass="result_box">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Deposit Section" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Amount:" />
+            <TextField fx:id="amount_fld" />
+            <Button fx:id="deposit_btn" mnemonicParsing="false" styleClass="deposit_box" text="Deposit">
+                <graphic>
+                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../../Images/bank.png" />
+                    </ImageView>
+                </graphic>
+            </Button>
+        </VBox>
+    </VBox>
+</AnchorPane>

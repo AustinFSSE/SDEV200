@@ -3,6 +3,7 @@ package org.example.bankingjavafx.Controllers.Client;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import org.example.bankingjavafx.Models.Model;
+import org.example.bankingjavafx.Views.ClientMenuOptions;
 
 import java.util.ResourceBundle;
 import java.net.URL;
@@ -29,14 +30,14 @@ public class ClientMenuController implements Initializable {
     }
 
     private void onAccounts() {
-        Model.getInstance().getViewFactory().getClientSelectedMenuItem().set("Accounts");
+        Model.getInstance().getViewFactory().getClientSelectedMenuItem().set(ClientMenuOptions.ACCOUNTS);
     }
 
     private void onTransactions() {
-        Model.getInstance().getViewFactory().getClientSelectedMenuItem().set("Transactions");
+        Model.getInstance().getViewFactory().getClientSelectedMenuItem().set(ClientMenuOptions.TRANSACTIONS);
     }
 
     private void onDashboard() {
-        Model.getInstance().getViewFactory().getClientSelectedMenuItem().set("Dashboard");
+        Model.getInstance().getViewFactory().getClientSelectedMenuItem().set(ClientMenuOptions.DASHBOARD);
     }
 }

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="50.0" prefWidth="750.0" styleClass="client_cell_container"
+            stylesheets="@../../Styles/ClientCell.css" xmlns="http://javafx.com/javafx/11.0.14-internal"
+            xmlns:fx="http://javafx.com/fxml/1">
+   <HBox prefHeight="40.0" prefWidth="550.0" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="5.0">
+      <Label fx:id="fName_lbl" text="Client FName"/>
+      <Label fx:id="lName_lbl" text="Client LName"/>
+      <Label fx:id="pAddr_lbl" text="\@fLName1"/>
+      <Label fx:id="ch_acc_lbl" styleClass="acc_display_lbl" text="Account Number"/>
+      <Label fx:id="sv_acc_lbl" styleClass="acc_display_lbl" text="Account Number"/>
+      <Label fx:id="date_lbl" prefHeight="22.0" prefWidth="62.0" text="Date"/>
+   </HBox>
+   <Button fx:id="delete_btn" layoutX="684.0" layoutY="13.0" mnemonicParsing="false" styleClass="delete_btn"
+           stylesheets="@../../Styles/ClientCell.css" text="Delete"/>
+</AnchorPane>

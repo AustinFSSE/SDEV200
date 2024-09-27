@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="60.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/11.0.14-internal"
+            xmlns:fx="http://javafx.com/fxml/1">
+   <VBox prefHeight="50.0" prefWidth="50.0" styleClass="trans_txt_container"
+         stylesheets="@../../Styles/TransactionCell.css" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="14.0"
+         AnchorPane.topAnchor="5.0">
+      <Text fx:id="deposit_txt" strokeType="OUTSIDE" strokeWidth="0.0" text="deposit"/>
+      <Text fx:id="withdrawal_txt" strokeType="OUTSIDE" strokeWidth="0.0" text="withdrawal"/>
+   </VBox>
+   <Label fx:id="date_lbl" layoutX="95.0" layoutY="22.0" styleClass="trans_date_lbl"
+          stylesheets="@../../Styles/TransactionCell.css" text="22-08-08" AnchorPane.leftAnchor="100.0"
+          AnchorPane.topAnchor="22.0"/>
+   <Label fx:id="sender_lbl" layoutX="175.0" layoutY="22.0" styleClass="trans_pAddress_lbl"
+          stylesheets="@../../Styles/TransactionCell.css" text="Sender" AnchorPane.leftAnchor="200.0"
+          AnchorPane.topAnchor="22.0"/>
+   <Line endX="-14.0" endY="6.0" layoutX="293.0" layoutY="31.0" startX="-14.0" startY="-12.0" strokeWidth="2.0"
+         AnchorPane.bottomAnchor="21.5" AnchorPane.leftAnchor="300.0"/>
+   <Label fx:id="receiver_lbl" layoutX="352.0" layoutY="20.0" styleClass="trans_pAddress_lbl"
+          stylesheets="@../../Styles/TransactionCell.css" text="Receiver" AnchorPane.leftAnchor="358.0"
+          AnchorPane.topAnchor="22.0"/>
+   <Label fx:id="amount_lbl" layoutX="438.0" layoutY="15.0" styleClass="trans_amount_lbl"
+          stylesheets="@../../Styles/TransactionCell.css" text="Money Amount" AnchorPane.rightAnchor="13.0"
+          AnchorPane.topAnchor="15.0"/>
+</AnchorPane>

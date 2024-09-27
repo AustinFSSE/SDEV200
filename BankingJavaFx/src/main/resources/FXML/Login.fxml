@@ -20,7 +20,7 @@
    </VBox>
    <VBox layoutX="223.0" layoutY="25.0" prefHeight="350.0" prefWidth="350.0" styleClass="login_form_container" stylesheets="@../Styles/Login.css" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="25.0">
       <Label id="choice-prompt-text" text="Choose Your Account Type" textFill="#111111" />
-      <ChoiceBox fx:id="account_selector" prefWidth="150.0" styleClass="account_selector" stylesheets="@../Styles/Login.css" />
+      <ChoiceBox fx:id="account_selector" prefWidth="100.0" styleClass="account_selector" stylesheets="@../Styles/Login.css" />
       <Label fx:id="user_id_lbl" text="User ID" />
       <TextField fx:id="user_id_field" styleClass="input_field" stylesheets="@../Styles/Login.css" />
       <Label fx:id="user_password_lbl" stylesheets="@../Styles/Login.css" text="User Password" />
