@@ -1,0 +1,35 @@
+
+
+.form_container {
+    -fx-background-color: darkgray;
+}
+.form_container Label {
+    -fx-spacing: 5;
+    -fx-font-weight: bold;
+    -fx-font-size: 1.3em;
+}
+.form_container TextField {
+    -fx-pref-height: 5;
+    -fx-pref-width: 115;
+    -fx-spacing: 10;
+    -fx-padding: 10;
+    -fx-border-width: 1;
+    -fx-border-color: black;
+    -fx-effect: dropshadow(three-pass-box, black, 3, 0, 0, 3);
+}
+.form_container_btn {
+    -fx-pref-height: 5;
+    -fx-pref-width: 100;
+    -fx-spacing: 10;
+    -fx-padding: 10;
+    -fx-border-width: 1;
+    -fx-border-color: black;
+    -fx-effect: dropshadow(three-pass-box, black, 3, 0, 0, 3);
+}
+
+.error_lbl {
+    -fx-text-fill: red;
+}
+.success_lbl {
+    -fx-text-fill: green;
+}

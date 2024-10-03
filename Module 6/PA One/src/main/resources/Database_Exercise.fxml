@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+            prefWidth="600.0" styleClass="form_container" stylesheets="@Styles.css"
+            xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.github.austinfsse.sdev200.paone.Staffing">
+    <Button fx:id="view_btn" layoutX="65.0" layoutY="342.0" mnemonicParsing="false" styleClass="form_container_btn"
+            text="View"/>
+    <Button fx:id="insert_btn" layoutX="189.0" layoutY="342.0" mnemonicParsing="false" styleClass="form_container_btn"
+            text="Insert"/>
+    <Button fx:id="update_btn" layoutX="326.0" layoutY="342.0" mnemonicParsing="false" styleClass="form_container_btn"
+            text="Update"/>
+    <Button fx:id="clear_btn" layoutX="453.0" layoutY="342.0" mnemonicParsing="false" styleClass="form_container_btn"
+            text="Clear"/>
+    <Label layoutX="14.0" layoutY="64.0" text="ID"/>
+    <Label layoutX="209.0" layoutY="64.0" text="First Name"/>
+    <Label layoutX="16.0" layoutY="118.0" text="Last Name"/>
+    <Label layoutX="277.0" layoutY="118.0" text="Middle Initial"/>
+    <Label layoutX="16.0" layoutY="177.0" text="Address"/>
+    <Label layoutX="17.0" layoutY="240.0" text="City"/>
+    <Label layoutX="277.0" layoutY="177.0" text="State"/>
+    <Label layoutX="239.0" layoutY="240.0" text="Telephone"/>
+    <TextField fx:id="id_fld" layoutX="45.0" layoutY="56.0" prefHeight="23.0" stylesheets="@Styles.css"/>
+    <TextField fx:id="lname_fld" layoutX="100.0" layoutY="110.0" prefHeight="23.0"/>
+    <TextField fx:id="mInitial_fld" layoutX="388.0" layoutY="110.0" prefHeight="23.0"/>
+    <TextField fx:id="fname_fld" layoutX="301.0" layoutY="56.0" prefHeight="23.0"/>
+    <TextField fx:id="addr_fld" layoutX="100.0" layoutY="169.0" prefHeight="23.0"/>
+    <TextField fx:id="state_fld" layoutX="327.0" layoutY="169.0" prefHeight="23.0"/>
+    <TextField fx:id="city_fld" layoutX="57.0" layoutY="232.0" prefHeight="23.0"/>
+    <TextField fx:id="telephone_fld" layoutX="349.0" layoutY="232.0" prefHeight="23.0"/>
+    <Label fx:id="error_lbl" layoutX="17.0" layoutY="22.0" styleClass="error_lbl" stylesheets="@Styles.css"/>
+    <Label fx:id="success_lbl" layoutX="17.0" layoutY="309.0" styleClass="success_lbl" stylesheets="@Styles.css"/>
+</AnchorPane>
