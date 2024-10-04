@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="251.0" prefWidth="500.0" styleClass="gui_container" stylesheets="@Styles.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.austinfsse.sdev200.patwo.DatabaseController">
+    <Label layoutX="25.0" layoutY="12.0" text="Connection Status:" />
+    <Label fx:id="database_lbl" layoutX="82.0" layoutY="163.0" prefHeight="23.0" prefWidth="315.0" styleClass="gui_container_success" />
+   <Label fx:id="error_lbl" layoutX="82.0" layoutY="197.0" prefHeight="23.0" prefWidth="315.0" styleClass="gui_container_failure" />
+    <Label layoutX="25.0" layoutY="74.0" text="JDBC Drive" />
+    <Label layoutX="25.0" layoutY="127.0" text="Database URL" />
+    <TextField fx:id="jdbc_drive_fld" layoutX="156.0" layoutY="72.0" />
+    <TextField fx:id="db_url_fld" layoutX="156.0" layoutY="125.0" />
+    <Button fx:id="terminate_btn" layoutX="332.0" layoutY="73.0" mnemonicParsing="false" text="Terminate Program" />
+    <Button fx:id="connect_btn" layoutX="331.0" layoutY="126.0" mnemonicParsing="false" prefWidth="120.0" text="Connect to DB" />
+</AnchorPane>

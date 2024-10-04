@@ -42,8 +42,10 @@ public class DatabaseDriver {
     }
 
     // Method to insert a new record into the staff table
-    public void insertRecord(String id, String firstName, String lastName, String mi, String address, String city, String state, String telephone) {
-        String insertRecordSQL = "INSERT INTO Staff (ID_number, firstname, lastname, mi, address, city, state, telephone) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
+    public void insertRecord(String id, String firstName, String lastName, String mi,
+                             String address, String city, String state, String telephone) {
+        String insertRecordSQL = "INSERT INTO Staff (ID_number, firstname, lastname, mi, address, city, state, telephone) " +
+                "VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
 
         try (Connection conn = connect();
              PreparedStatement pstmt = conn.prepareStatement(insertRecordSQL)) {
