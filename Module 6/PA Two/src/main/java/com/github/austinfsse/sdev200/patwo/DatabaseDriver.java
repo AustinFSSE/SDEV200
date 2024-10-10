@@ -31,7 +31,7 @@ public class DatabaseDriver {
         try (Connection conn = connect();
              PreparedStatement preparedStatement = conn.prepareStatement(createBatchTable);
              PreparedStatement preparedStatement2 = conn.prepareStatement(createNonBatchTable)) {
-            preparedStatement.execute(); // Execute the SQL statement to create the table'
+            preparedStatement.execute(); // Execute the SQL statement to create the table
             preparedStatement2.execute();
             System.out.println("Table created");
         } catch (SQLException e) {

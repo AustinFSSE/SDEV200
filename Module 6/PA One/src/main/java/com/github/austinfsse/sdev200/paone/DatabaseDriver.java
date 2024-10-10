@@ -50,15 +50,7 @@ public class DatabaseDriver {
         try (Connection conn = connect();
              PreparedStatement pstmt = conn.prepareStatement(insertRecordSQL)) {
             // Set parameters for the prepared statement
-            pstmt.setString(1, id);
-            pstmt.setString(2, firstName);
-            pstmt.setString(3, lastName);
-            pstmt.setString(4, mi);
-            pstmt.setString(5, address);
-            pstmt.setString(6, city);
-            pstmt.setString(7, state);
-            pstmt.setString(8, telephone);
-            pstmt.executeUpdate(); // Execute the insertion
+            sqlParameters(id, lastName, firstName, mi, address, state, city, telephone, pstmt);
             System.out.println("Record created");
         } catch (SQLException e) {
             System.out.println(e.getMessage()); // Print any SQL errors
@@ -67,7 +59,7 @@ public class DatabaseDriver {
 
     // Method to view a record by ID
     public String[] viewRecord(String id) {
-        String viewRecordSQL = "SELECT * FROM Staff WHERE ID_number = ?"; // SQL query to fetch record
+        String viewRecordSQL = "SELECT * FROM staff WHERE ID_number = ?"; // SQL query to fetch record
         String databaseURL = "jdbc:sqlite:staffing.db"; // Redundant declaration, can be removed
         String[] record = new String[8]; // Array to store record data
 
@@ -100,17 +92,21 @@ public class DatabaseDriver {
         try (Connection conn = connect();
              PreparedStatement stmt = conn.prepareStatement(url)) {
             // Set parameters for the prepared statement
-            stmt.setString(1, id);
-            stmt.setString(2, lastName);
-            stmt.setString(3, firstName);
-            stmt.setString(4, mi);
-            stmt.setString(5, address);
-            stmt.setString(6, state);
-            stmt.setString(7, city);
-            stmt.setString(8, telephone);
-            stmt.executeUpdate(); // Execute the update
+            sqlParameters(id, firstName, lastName, mi, address, city, state, telephone, stmt);
         } catch (SQLException exception) {
             System.out.println(exception.getMessage()); // Print any SQL errors
         }
+    }
+
+    private void sqlParameters(String id, String firstName, String lastName, String mi, String address, String city, String state, String telephone, PreparedStatement stmt) throws SQLException {
+        stmt.setString(1, id);
+        stmt.setString(2, lastName);
+        stmt.setString(3, firstName);
+        stmt.setString(4, mi);
+        stmt.setString(5, address);
+        stmt.setString(6, state);
+        stmt.setString(7, city);
+        stmt.setString(8, telephone);
+        stmt.executeUpdate(); // Execute the update
     }
 }
